@@ -14,7 +14,7 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionTransfer;
 interface ShipmentTypeReaderInterface
 {
     /**
-     * @param list<string> $shipmentTypeUuids
+     * @param array<string> $shipmentTypeUuids
      *
      * @return \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer
      */

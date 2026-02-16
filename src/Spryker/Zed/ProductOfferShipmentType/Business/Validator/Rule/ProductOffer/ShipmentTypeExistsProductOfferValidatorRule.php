@@ -114,7 +114,7 @@ class ShipmentTypeExistsProductOfferValidatorRule implements ProductOfferValidat
 
     /**
      * @param \ArrayObject<array-key, \Generated\Shared\Transfer\ProductOfferTransfer> $productOfferTransfers
-     * @param list<string> $shipmentTypeUuids
+     * @param array<string> $shipmentTypeUuids
      *
      * @return array<string, array<string>>
      */
@@ -142,7 +142,7 @@ class ShipmentTypeExistsProductOfferValidatorRule implements ProductOfferValidat
     }
 
     /**
-     * @param list<string> $shipmentTypeUuids
+     * @param array<string> $shipmentTypeUuids
      *
      * @return array<string, true>
      */
