@@ -26,11 +26,6 @@ class ProductOfferValidator implements ProductOfferValidatorInterface
         $this->productOfferValidatorRules = $productOfferValidatorRules;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer $productOfferShipmentTypeCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer
-     */
     public function validate(
         ProductOfferShipmentTypeCollectionResponseTransfer $productOfferShipmentTypeCollectionResponseTransfer
     ): ProductOfferShipmentTypeCollectionResponseTransfer {
@@ -48,12 +43,6 @@ class ProductOfferValidator implements ProductOfferValidatorInterface
         return $productOfferShipmentTypeCollectionResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer $productOfferShipmentTypeCollectionResponseTransfer
-     * @param \Generated\Shared\Transfer\ErrorCollectionTransfer $errorCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer
-     */
     protected function mergeErrors(
         ProductOfferShipmentTypeCollectionResponseTransfer $productOfferShipmentTypeCollectionResponseTransfer,
         ErrorCollectionTransfer $errorCollectionTransfer

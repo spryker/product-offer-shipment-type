@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer
 
 interface ProductOfferValidatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer $productOfferShipmentTypeCollectionResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionResponseTransfer
-     */
     public function validate(
         ProductOfferShipmentTypeCollectionResponseTransfer $productOfferShipmentTypeCollectionResponseTransfer
     ): ProductOfferShipmentTypeCollectionResponseTransfer;

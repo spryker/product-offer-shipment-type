@@ -70,9 +70,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
      */
     protected ProductOfferShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -239,9 +236,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
         $this->assertProductOfferHasShipmentTypesPersisted($productOfferTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenShipmentTypeIsDuplicatedInProductOffer(): void
     {
         // Arrange
@@ -264,9 +258,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
             ->saveProductOfferShipmentTypes($productOfferShipmentTypeCollectionRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenShipmentTypeIsDuplicatedInProductOffer(): void
     {
         // Arrange
@@ -297,9 +288,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
         $this->assertSame(0, $this->tester->getNumberOfPersistedProductOfferShipmentTypes($productOfferTransfer));
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenProductOfferIsDuplicated(): void
     {
         // Arrange
@@ -320,9 +308,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
             ->saveProductOfferShipmentTypes($productOfferShipmentTypeCollectionRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenProductOfferIsDuplicated(): void
     {
         // Arrange
@@ -351,9 +336,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
         $this->assertSame(0, $this->tester->getNumberOfPersistedProductOfferShipmentTypes($productOfferTransfer));
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenProductOfferReferenceIsInvalid(): void
     {
         // Arrange
@@ -374,9 +356,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
             ->saveProductOfferShipmentTypes($productOfferShipmentTypeCollectionRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenProductOfferReferenceIsInvalid(): void
     {
         // Arrange
@@ -405,9 +384,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
         $this->assertSame(0, $this->tester->getNumberOfPersistedProductOfferShipmentTypes($productOfferTransfer));
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenShipmentTypeUuidIsInvalid(): void
     {
         // Arrange
@@ -429,9 +405,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
             ->saveProductOfferShipmentTypes($productOfferShipmentTypeCollectionRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsValidationErrorWhenShipmentTypeUuidIsInvalid(): void
     {
         // Arrange
@@ -586,11 +559,6 @@ class SaveProductOfferShipmentTypesTest extends Unit
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     *
-     * @return void
-     */
     protected function assertProductOfferHasShipmentTypesPersisted(ProductOfferTransfer $productOfferTransfer): void
     {
         $this->assertSame($productOfferTransfer->getShipmentTypes()->count(), $this->tester->getNumberOfPersistedProductOfferShipmentTypes($productOfferTransfer));

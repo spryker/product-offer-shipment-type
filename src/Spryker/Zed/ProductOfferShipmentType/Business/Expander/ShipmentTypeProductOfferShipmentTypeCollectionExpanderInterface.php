@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ShipmentTypeCollectionTransfer;
 
 interface ShipmentTypeProductOfferShipmentTypeCollectionExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function expandProductOfferShipmentTypeCollectionWithShipmentTypes(
         ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer,
         ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer

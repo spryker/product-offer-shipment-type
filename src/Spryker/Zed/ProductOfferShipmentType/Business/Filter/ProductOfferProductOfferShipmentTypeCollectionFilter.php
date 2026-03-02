@@ -19,20 +19,11 @@ class ProductOfferProductOfferShipmentTypeCollectionFilter implements ProductOff
      */
     protected ProductOfferIndexerInterface $productOfferIndexer;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Indexer\ProductOfferIndexerInterface $productOfferIndexer
-     */
     public function __construct(ProductOfferIndexerInterface $productOfferIndexer)
     {
         $this->productOfferIndexer = $productOfferIndexer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferCollectionTransfer $productOfferCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function filterProductOfferShipmentTypeCollectionTransfersByProductOfferCollectionTransfer(
         ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer,
         ProductOfferCollectionTransfer $productOfferCollectionTransfer

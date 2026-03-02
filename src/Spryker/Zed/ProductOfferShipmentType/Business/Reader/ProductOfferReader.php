@@ -35,11 +35,6 @@ class ProductOfferReader implements ProductOfferReaderInterface
      */
     protected ProductOfferShipmentTypeToProductOfferFacadeInterface $productOfferFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Filter\ProductOfferProductOfferShipmentTypeCollectionFilterInterface $productOfferProductOfferShipmentTypeCollectionFilter
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Expander\ProductOfferProductOfferShipmentTypeCollectionExpanderInterface $productOfferProductOfferShipmentTypeCollectionExpander
-     * @param \Spryker\Zed\ProductOfferShipmentType\Dependency\Facade\ProductOfferShipmentTypeToProductOfferFacadeInterface $productOfferFacade
-     */
     public function __construct(
         ProductOfferProductOfferShipmentTypeCollectionFilterInterface $productOfferProductOfferShipmentTypeCollectionFilter,
         ProductOfferProductOfferShipmentTypeCollectionExpanderInterface $productOfferProductOfferShipmentTypeCollectionExpander,
@@ -65,12 +60,6 @@ class ProductOfferReader implements ProductOfferReaderInterface
         return $this->productOfferFacade->getProductOfferCollection($productOfferCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeIteratorCriteriaTransfer $productOfferShipmentTypeIteratorCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function getProductOffersForProductOfferShipmentTypeCollection(
         ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer,
         ProductOfferShipmentTypeIteratorCriteriaTransfer $productOfferShipmentTypeIteratorCriteriaTransfer

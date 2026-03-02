@@ -35,9 +35,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
      */
     protected ProductOfferShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -45,9 +42,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         $this->tester->ensureDatabaseTableIsEmpty($this->tester->getProductOfferShipmentTypeQuery());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsEmptyCollectionWhenThereAreNoProductOfferShipmentTypeRelations(): void
     {
         // Arrange
@@ -64,9 +58,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         $this->assertCount(0, $productOfferShipmentTypeCollectionTransfer->getProductOfferShipmentTypes());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsAllProductOfferShipmentTypeRelationsWhenNoFiltersProvided(): void
     {
         $productOfferTransfer1 = $this->tester->haveProductOffer();
@@ -88,9 +79,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         $this->assertCount(4, $productOfferShipmentTypeCollectionTransfer->getProductOfferShipmentTypes());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionFilteredByProductOfferShipmentTypeId(): void
     {
         // Arrange
@@ -122,9 +110,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionFilteredByProductOfferId(): void
     {
         // Arrange
@@ -158,9 +143,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionGroupedByProductOfferId(): void
     {
         // Arrange
@@ -200,9 +182,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         ));
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionFilteredByShipmentTypeId(): void
     {
         // Arrange
@@ -231,9 +210,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionPaginatedByLimitAndOffset(): void
     {
         // Arrange
@@ -259,9 +235,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         $this->assertSame(3, $productOfferShipmentTypeCollectionTransfer->getPaginationOrFail()->getNbResults());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionPaginatedByPageAndMaxPerPage(): void
     {
         // Arrange
@@ -299,9 +272,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         $this->assertSame(1, $paginationTransfer->getPreviousPage());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeCollectionSortedByProductOfferReferenceFieldDesc(): void
     {
         // Arrange
@@ -340,9 +310,6 @@ class GetProductOfferShipmentTypeCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsShipmentTypesSortedByKeyFieldAsc(): void
     {
         // Arrange

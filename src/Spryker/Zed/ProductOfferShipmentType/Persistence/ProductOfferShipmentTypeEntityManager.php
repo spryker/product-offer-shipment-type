@@ -15,12 +15,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class ProductOfferShipmentTypeEntityManager extends AbstractEntityManager implements ProductOfferShipmentTypeEntityManagerInterface
 {
-    /**
-     * @param int $idProductOffer
-     * @param int $idShipmentType
-     *
-     * @return void
-     */
     public function createProductOfferShipmentType(int $idProductOffer, int $idShipmentType): void
     {
         $productOfferShipmentTypeEntity = (new SpyProductOfferShipmentType())

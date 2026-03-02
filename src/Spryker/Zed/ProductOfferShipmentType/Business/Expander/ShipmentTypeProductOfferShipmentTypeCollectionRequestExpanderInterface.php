@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer;
 
 interface ShipmentTypeProductOfferShipmentTypeCollectionRequestExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer
-     */
     public function expandWithShipmentTypeIds(
         ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
     ): ProductOfferShipmentTypeCollectionRequestTransfer;

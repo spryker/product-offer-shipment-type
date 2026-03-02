@@ -92,12 +92,6 @@ class ProductOfferShipmentTypeRepository extends AbstractRepository implements P
             );
     }
 
-    /**
-     * @param \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery $productOfferShipmentTypeQuery
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCriteriaTransfer $productOfferShipmentTypeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery
-     */
     protected function applyProductOfferShipmentTypeFilters(
         SpyProductOfferShipmentTypeQuery $productOfferShipmentTypeQuery,
         ProductOfferShipmentTypeCriteriaTransfer $productOfferShipmentTypeCriteriaTransfer
@@ -141,12 +135,6 @@ class ProductOfferShipmentTypeRepository extends AbstractRepository implements P
         return $productOfferShipmentTypeQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery $productOfferShipmentTypeQuery
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCriteriaTransfer $productOfferShipmentTypeCriteriaTransfer
-     *
-     * @return \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery
-     */
     protected function applyProductOfferShipmentTypeSorting(
         SpyProductOfferShipmentTypeQuery $productOfferShipmentTypeQuery,
         ProductOfferShipmentTypeCriteriaTransfer $productOfferShipmentTypeCriteriaTransfer
@@ -162,12 +150,6 @@ class ProductOfferShipmentTypeRepository extends AbstractRepository implements P
         return $productOfferShipmentTypeQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery $productOfferShipmentTypeQuery
-     * @param \Generated\Shared\Transfer\PaginationTransfer $paginationTransfer
-     *
-     * @return \Propel\Runtime\ActiveQuery\ModelCriteria
-     */
     protected function applyProductOfferShipmentTypePagination(
         SpyProductOfferShipmentTypeQuery $productOfferShipmentTypeQuery,
         PaginationTransfer $paginationTransfer

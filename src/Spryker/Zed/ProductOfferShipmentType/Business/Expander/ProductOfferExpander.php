@@ -45,13 +45,6 @@ class ProductOfferExpander implements ProductOfferExpanderInterface
      */
     protected ShipmentTypeIndexerInterface $shipmentTypeIndexer;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Persistence\ProductOfferShipmentTypeRepositoryInterface $productOfferShipmentTypeRepository
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ProductOfferExtractorInterface $productOfferExtractor
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ProductOfferShipmentTypeExtractorInterface $productOfferShipmentTypeExtractor
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Reader\ShipmentTypeReaderInterface $shipmentTypeReader
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Indexer\ShipmentTypeIndexerInterface $shipmentTypeIndexer
-     */
     public function __construct(
         ProductOfferShipmentTypeRepositoryInterface $productOfferShipmentTypeRepository,
         ProductOfferExtractorInterface $productOfferExtractor,
@@ -66,11 +59,6 @@ class ProductOfferExpander implements ProductOfferExpanderInterface
         $this->shipmentTypeIndexer = $shipmentTypeIndexer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferCollectionTransfer $productOfferCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferCollectionTransfer
-     */
     public function expandProductOfferCollectionWithShipmentTypes(
         ProductOfferCollectionTransfer $productOfferCollectionTransfer
     ): ProductOfferCollectionTransfer {

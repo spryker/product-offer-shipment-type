@@ -36,12 +36,6 @@ class ProductOfferShipmentTypeReader implements ProductOfferShipmentTypeReaderIn
      */
     protected ShipmentTypeReaderInterface $shipmentTypeReader;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\ProductOfferShipmentTypeConfig $productOfferShipmentTypeConfig
-     * @param \Spryker\Zed\ProductOfferShipmentType\Persistence\ProductOfferShipmentTypeRepositoryInterface $productOfferShipmentTypeRepository
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Reader\ProductOfferReaderInterface $productOfferReader
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Reader\ShipmentTypeReaderInterface $shipmentTypeReader
-     */
     public function __construct(
         ProductOfferShipmentTypeConfig $productOfferShipmentTypeConfig,
         ProductOfferShipmentTypeRepositoryInterface $productOfferShipmentTypeRepository,

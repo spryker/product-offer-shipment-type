@@ -30,9 +30,6 @@ class ExpandProductOfferCollectionWithShipmentTypesTest extends Unit
      */
     protected ProductOfferShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -40,9 +37,6 @@ class ExpandProductOfferCollectionWithShipmentTypesTest extends Unit
         $this->tester->ensureDatabaseTableIsEmpty($this->tester->getProductOfferShipmentTypeQuery());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandsOneProductOfferWithOneRelatedShipmentType(): void
     {
         // Arrange
@@ -65,9 +59,6 @@ class ExpandProductOfferCollectionWithShipmentTypesTest extends Unit
         $this->assertEquals($shipmentTypeTransfer, $expandedProductOfferTransfer->getShipmentTypes()->offsetGet(0));
     }
 
-    /**
-     * @return void
-     */
     public function testExpandsFewProductOffersWithFewRelatedShipmentTypes(): void
     {
         // Arrange
@@ -108,9 +99,6 @@ class ExpandProductOfferCollectionWithShipmentTypesTest extends Unit
         $this->assertEquals($shipmentTypeTransfer3, $expandedProductOfferTransfer2->getShipmentTypes()->offsetGet(0));
     }
 
-    /**
-     * @return void
-     */
     public function testDoesNotExpandProductOffersWhenNoRelatedShipmentTypesExist(): void
     {
         // Arrange
@@ -129,9 +117,6 @@ class ExpandProductOfferCollectionWithShipmentTypesTest extends Unit
         $this->assertEmpty($expandedProductOfferTransfer->getShipmentTypes());
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsNullValueExceptionWhenIdProductOfferIsNotSet(): void
     {
         // Arrange

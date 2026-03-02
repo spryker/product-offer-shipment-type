@@ -46,12 +46,6 @@ class ShipmentTypeExistsProductOfferValidatorRule implements ProductOfferValidat
      */
     protected ErrorAdderInterface $errorAdder;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ProductOfferExtractorInterface $productOfferExtractor
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ShipmentTypeExtractorInterface $shipmentTypeExtractor
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Reader\ShipmentTypeReaderInterface $shipmentTypeReader
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Validator\Util\ErrorAdderInterface $errorAdder
-     */
     public function __construct(
         ProductOfferExtractorInterface $productOfferExtractor,
         ShipmentTypeExtractorInterface $shipmentTypeExtractor,

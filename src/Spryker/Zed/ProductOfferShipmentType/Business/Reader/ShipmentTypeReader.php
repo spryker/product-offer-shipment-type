@@ -41,12 +41,6 @@ class ShipmentTypeReader implements ShipmentTypeReaderInterface
      */
     protected ProductOfferShipmentTypeToShipmentTypeFacadeInterface $shipmentTypeFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Filter\ShipmentTypeProductOfferShipmentTypeCollectionFilterInterface $shipmentTypeProductOfferShipmentTypeCollectionFilter
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Expander\ShipmentTypeProductOfferShipmentTypeCollectionExpanderInterface $shipmentTypeProductOfferShipmentTypeCollectionExpander
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ShipmentTypeExtractorInterface $shipmentTypeExtractor
-     * @param \Spryker\Zed\ProductOfferShipmentType\Dependency\Facade\ProductOfferShipmentTypeToShipmentTypeFacadeInterface $shipmentTypeFacade
-     */
     public function __construct(
         ShipmentTypeProductOfferShipmentTypeCollectionFilterInterface $shipmentTypeProductOfferShipmentTypeCollectionFilter,
         ShipmentTypeProductOfferShipmentTypeCollectionExpanderInterface $shipmentTypeProductOfferShipmentTypeCollectionExpander,
@@ -87,12 +81,6 @@ class ShipmentTypeReader implements ShipmentTypeReaderInterface
         return $this->shipmentTypeFacade->getShipmentTypeCollection($shipmentTypeCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeIteratorCriteriaTransfer $productOfferShipmentTypeIteratorCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function getShipmentTypesForProductOfferShipmentTypeCollection(
         ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer,
         ProductOfferShipmentTypeIteratorCriteriaTransfer $productOfferShipmentTypeIteratorCriteriaTransfer

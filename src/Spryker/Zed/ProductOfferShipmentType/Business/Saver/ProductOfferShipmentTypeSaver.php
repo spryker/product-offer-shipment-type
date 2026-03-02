@@ -57,14 +57,6 @@ class ProductOfferShipmentTypeSaver implements ProductOfferShipmentTypeSaverInte
      */
     protected ProductOfferExtractorInterface $productOfferExtractor;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Persistence\ProductOfferShipmentTypeEntityManagerInterface $productOfferShipmentTypeEntityManager
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Validator\ProductOfferValidatorInterface $productOfferValidator
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Filter\ProductOfferFilterInterface $productOfferFilter
-     * @param \Spryker\Zed\ProductOfferShipmentType\Persistence\ProductOfferShipmentTypeRepositoryInterface $productOfferShipmentTypeRepository
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Expander\ProductOfferShipmentTypeCollectionRequestExpanderInterface $productOfferShipmentTypeCollectionRequestExpander
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ProductOfferExtractorInterface $productOfferExtractor
-     */
     public function __construct(
         ProductOfferShipmentTypeEntityManagerInterface $productOfferShipmentTypeEntityManager,
         ProductOfferValidatorInterface $productOfferValidator,
@@ -210,11 +202,6 @@ class ProductOfferShipmentTypeSaver implements ProductOfferShipmentTypeSaverInte
         return $shipmentTypeIdsGroupedByIdProductOffer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
-     *
-     * @return void
-     */
     protected function assertRequiredFields(ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer): void
     {
         $productOfferShipmentTypeCollectionRequestTransfer->requireProductOffers();

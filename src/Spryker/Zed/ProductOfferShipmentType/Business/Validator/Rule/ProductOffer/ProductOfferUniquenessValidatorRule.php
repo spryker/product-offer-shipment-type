@@ -23,9 +23,6 @@ class ProductOfferUniquenessValidatorRule implements ProductOfferValidatorRuleIn
      */
     protected ErrorAdderInterface $errorAdder;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Validator\Util\ErrorAdderInterface $errorAdder
-     */
     public function __construct(ErrorAdderInterface $errorAdder)
     {
         $this->errorAdder = $errorAdder;

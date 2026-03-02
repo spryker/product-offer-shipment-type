@@ -47,9 +47,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
      */
     protected ProductOfferShipmentTypeBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -57,9 +54,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         $this->tester->ensureDatabaseTableIsEmpty($this->tester->getProductOfferShipmentTypeQuery());
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsNoDataWhenThereIsNoProductOfferShipmentTypeRelations(): void
     {
         // Arrange
@@ -80,9 +74,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         $this->assertCount(0, $productOfferShipmentTypeTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTransfersInBatches(): void
     {
         // Arrange
@@ -110,9 +101,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         $this->assertCount(2, iterator_to_array($iterator));
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersByProductOfferIds(): void
     {
         // Arrange
@@ -139,9 +127,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersFilteredByProductOfferApprovalStatus(): void
     {
         // Arrange
@@ -178,9 +163,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersFilteredByProductOfferIsActiveStatus(): void
     {
         // Arrange
@@ -213,9 +195,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersFilteredByProductOfferProductConcreteIsActiveStatus(): void
     {
         // Arrange
@@ -254,9 +233,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersFilteredByShipmentTypeIsActiveStatus(): void
     {
         // Arrange
@@ -286,9 +262,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersExpandedWithProductOffers(): void
     {
         // Arrange
@@ -319,9 +292,6 @@ class GetProductOfferShipmentTypesIteratorTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsProductOfferShipmentTypeTransfersExpandedWithShipmentTypes(): void
     {
         // Arrange

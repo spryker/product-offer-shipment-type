@@ -25,10 +25,6 @@ class ShipmentTypeProductOfferShipmentTypeCollectionExpander implements Shipment
      */
     protected ShipmentTypeExtractorInterface $shipmentTypeExtractor;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Indexer\ShipmentTypeIndexerInterface $shipmentTypeIndexer
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ShipmentTypeExtractorInterface $shipmentTypeExtractor
-     */
     public function __construct(
         ShipmentTypeIndexerInterface $shipmentTypeIndexer,
         ShipmentTypeExtractorInterface $shipmentTypeExtractor
@@ -37,12 +33,6 @@ class ShipmentTypeProductOfferShipmentTypeCollectionExpander implements Shipment
         $this->shipmentTypeExtractor = $shipmentTypeExtractor;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function expandProductOfferShipmentTypeCollectionWithShipmentTypes(
         ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer,
         ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer

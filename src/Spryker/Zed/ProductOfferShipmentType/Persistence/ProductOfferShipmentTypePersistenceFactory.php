@@ -18,17 +18,11 @@ use Spryker\Zed\ProductOfferShipmentType\Persistence\Propel\Mapper\ProductOfferS
  */
 class ProductOfferShipmentTypePersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery
-     */
     public function createProductOfferShipmentTypeQuery(): SpyProductOfferShipmentTypeQuery
     {
         return SpyProductOfferShipmentTypeQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferShipmentType\Persistence\Propel\Mapper\ProductOfferShipmentTypeMapper
-     */
     public function createProductOfferShipmentTypeMapper(): ProductOfferShipmentTypeMapper
     {
         return new ProductOfferShipmentTypeMapper();

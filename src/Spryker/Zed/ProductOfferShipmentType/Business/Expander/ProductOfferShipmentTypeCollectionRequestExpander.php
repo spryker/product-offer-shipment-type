@@ -21,10 +21,6 @@ class ProductOfferShipmentTypeCollectionRequestExpander implements ProductOfferS
      */
     protected ShipmentTypeProductOfferShipmentTypeCollectionRequestExpanderInterface $shipmentTypeProductOfferShipmentTypeCollectionRequestExpander;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Expander\ProductOfferProductOfferShipmentTypeCollectionRequestExpanderInterface $productOfferProductOfferShipmentTypeCollectionRequestExpander
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Expander\ShipmentTypeProductOfferShipmentTypeCollectionRequestExpanderInterface $shipmentTypeProductOfferShipmentTypeCollectionRequestExpander
-     */
     public function __construct(
         ProductOfferProductOfferShipmentTypeCollectionRequestExpanderInterface $productOfferProductOfferShipmentTypeCollectionRequestExpander,
         ShipmentTypeProductOfferShipmentTypeCollectionRequestExpanderInterface $shipmentTypeProductOfferShipmentTypeCollectionRequestExpander
@@ -33,11 +29,6 @@ class ProductOfferShipmentTypeCollectionRequestExpander implements ProductOfferS
         $this->shipmentTypeProductOfferShipmentTypeCollectionRequestExpander = $shipmentTypeProductOfferShipmentTypeCollectionRequestExpander;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer
-     */
     public function expandProductOfferShipmentTypeCollectionRequestTransfer(
         ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
     ): ProductOfferShipmentTypeCollectionRequestTransfer {

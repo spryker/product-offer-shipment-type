@@ -35,10 +35,6 @@ class ShipmentTypeUniquenessProductOfferValidatorRule implements ProductOfferVal
      */
     protected ShipmentTypeExtractorInterface $shipmentTypeExtractor;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Validator\Util\ErrorAdderInterface $errorAdder
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ShipmentTypeExtractorInterface $shipmentTypeExtractor
-     */
     public function __construct(
         ErrorAdderInterface $errorAdder,
         ShipmentTypeExtractorInterface $shipmentTypeExtractor
@@ -72,11 +68,6 @@ class ShipmentTypeUniquenessProductOfferValidatorRule implements ProductOfferVal
         return $errorCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     *
-     * @return bool
-     */
     protected function hasUniqueShipmentTypes(ProductOfferTransfer $productOfferTransfer): bool
     {
         /** @var \ArrayObject<array-key, \Generated\Shared\Transfer\ShipmentTypeTransfer> $shipmentTypeTransfers */

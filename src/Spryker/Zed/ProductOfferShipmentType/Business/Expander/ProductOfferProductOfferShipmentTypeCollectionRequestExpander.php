@@ -24,10 +24,6 @@ class ProductOfferProductOfferShipmentTypeCollectionRequestExpander implements P
      */
     protected ProductOfferReaderInterface $productOfferReader;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ProductOfferExtractorInterface $productOfferExtractor
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Reader\ProductOfferReaderInterface $productOfferReader
-     */
     public function __construct(
         ProductOfferExtractorInterface $productOfferExtractor,
         ProductOfferReaderInterface $productOfferReader
@@ -36,11 +32,6 @@ class ProductOfferProductOfferShipmentTypeCollectionRequestExpander implements P
         $this->productOfferReader = $productOfferReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionRequestTransfer
-     */
     public function expandWithProductOffersIds(
         ProductOfferShipmentTypeCollectionRequestTransfer $productOfferShipmentTypeCollectionRequestTransfer
     ): ProductOfferShipmentTypeCollectionRequestTransfer {

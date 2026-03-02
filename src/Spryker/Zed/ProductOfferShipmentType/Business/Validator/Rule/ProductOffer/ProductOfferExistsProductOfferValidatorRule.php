@@ -34,10 +34,6 @@ class ProductOfferExistsProductOfferValidatorRule implements ProductOfferValidat
      */
     protected ProductOfferReaderInterface $productOfferReader;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Validator\Util\ErrorAdderInterface $errorAdder
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Reader\ProductOfferReaderInterface $productOfferReader
-     */
     public function __construct(
         ErrorAdderInterface $errorAdder,
         ProductOfferReaderInterface $productOfferReader

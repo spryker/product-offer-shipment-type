@@ -9,12 +9,6 @@ namespace Spryker\Zed\ProductOfferShipmentType\Persistence;
 
 interface ProductOfferShipmentTypeEntityManagerInterface
 {
-    /**
-     * @param int $idProductOffer
-     * @param int $idShipmentType
-     *
-     * @return void
-     */
     public function createProductOfferShipmentType(int $idProductOffer, int $idShipmentType): void;
 
     /**

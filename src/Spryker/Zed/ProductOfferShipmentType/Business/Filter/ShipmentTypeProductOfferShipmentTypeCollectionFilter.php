@@ -20,20 +20,11 @@ class ShipmentTypeProductOfferShipmentTypeCollectionFilter implements ShipmentTy
      */
     protected ShipmentTypeIndexerInterface $shipmentTypeIndexer;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Indexer\ShipmentTypeIndexerInterface $shipmentTypeIndexer
-     */
     public function __construct(ShipmentTypeIndexerInterface $shipmentTypeIndexer)
     {
         $this->shipmentTypeIndexer = $shipmentTypeIndexer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function filterProductOfferShipmentTypeCollectionTransfersByShipmentTypeCollectionTransfer(
         ProductOfferShipmentTypeCollectionTransfer $productOfferShipmentTypeCollectionTransfer,
         ShipmentTypeCollectionTransfer $shipmentTypeCollectionTransfer

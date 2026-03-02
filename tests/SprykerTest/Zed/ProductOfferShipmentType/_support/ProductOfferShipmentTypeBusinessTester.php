@@ -34,12 +34,6 @@ class ProductOfferShipmentTypeBusinessTester extends Actor
 {
     use _generated\ProductOfferShipmentTypeBusinessTesterActions;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return bool
-     */
     public function hasProductOfferShipmentType(
         ProductOfferTransfer $productOfferTransfer,
         ShipmentTypeTransfer $shipmentTypeTransfer
@@ -50,11 +44,6 @@ class ProductOfferShipmentTypeBusinessTester extends Actor
             ->exists();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     *
-     * @return int
-     */
     public function getNumberOfPersistedProductOfferShipmentTypes(ProductOfferTransfer $productOfferTransfer): int
     {
         return $this->getProductOfferShipmentTypeQuery()
@@ -62,13 +51,6 @@ class ProductOfferShipmentTypeBusinessTester extends Actor
             ->count();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeTransfer $productOfferShipmentTypeTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return void
-     */
     public function assertProductOfferShipmentTypeTransfer(
         ProductOfferShipmentTypeTransfer $productOfferShipmentTypeTransfer,
         ProductOfferTransfer $productOfferTransfer,
@@ -86,9 +68,6 @@ class ProductOfferShipmentTypeBusinessTester extends Actor
         );
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery
-     */
     public function getProductOfferShipmentTypeQuery(): SpyProductOfferShipmentTypeQuery
     {
         return SpyProductOfferShipmentTypeQuery::create();

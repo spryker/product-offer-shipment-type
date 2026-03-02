@@ -19,12 +19,6 @@ class ProductOfferShipmentTypeHelper extends Module
 {
     use DataCleanupHelperTrait;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     * @param \Generated\Shared\Transfer\ShipmentTypeTransfer $shipmentTypeTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeTransfer
-     */
     public function haveProductOfferShipmentType(
         ProductOfferTransfer $productOfferTransfer,
         ShipmentTypeTransfer $shipmentTypeTransfer
@@ -45,11 +39,6 @@ class ProductOfferShipmentTypeHelper extends Module
             ->addShipmentType($shipmentTypeTransfer);
     }
 
-    /**
-     * @param int $idProductOfferShipmentType
-     *
-     * @return void
-     */
     protected function deleteProductOfferShipmentType(int $idProductOfferShipmentType): void
     {
         $this
@@ -58,9 +47,6 @@ class ProductOfferShipmentTypeHelper extends Module
             ->delete();
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferShipmentType\Persistence\SpyProductOfferShipmentTypeQuery
-     */
     protected function getProductOfferShipmentTypeQuery(): SpyProductOfferShipmentTypeQuery
     {
         return SpyProductOfferShipmentTypeQuery::create();

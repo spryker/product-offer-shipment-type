@@ -19,11 +19,6 @@ interface ProductOfferShipmentTypeRepositoryInterface
      */
     public function getShipmentTypeIdsByIdProductOffer(int $idProductOffer): array;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferShipmentTypeCriteriaTransfer $productOfferShipmentTypeCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferShipmentTypeCollectionTransfer
-     */
     public function getProductOfferShipmentTypeCollection(
         ProductOfferShipmentTypeCriteriaTransfer $productOfferShipmentTypeCriteriaTransfer
     ): ProductOfferShipmentTypeCollectionTransfer;

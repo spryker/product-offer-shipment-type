@@ -18,9 +18,6 @@ class ProductOfferFilter implements ProductOfferFilterInterface
      */
     protected ErrorExtractorInterface $errorExtractor;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferShipmentType\Business\Extractor\ErrorExtractorInterface $errorExtractor
-     */
     public function __construct(ErrorExtractorInterface $errorExtractor)
     {
         $this->errorExtractor = $errorExtractor;
