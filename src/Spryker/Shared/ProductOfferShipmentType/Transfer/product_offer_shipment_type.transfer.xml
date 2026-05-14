@@ -14,6 +14,7 @@
         <property name="shipmentTypeNames" type="string[]" singular="shipmentTypeName"/>
         <property name="shipmentTypeIds" type="int[]" singular="idShipmentType"/>
         <property name="groupByIdProductOffer" type="bool"/>
+        <property name="productConcreteSkus" type="string[]" singular="productConcreteSku"/>
     </transfer>
 
     <transfer name="ProductOfferShipmentTypeIteratorCriteria" strict="true">

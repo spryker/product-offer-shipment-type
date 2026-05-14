@@ -125,6 +125,12 @@ class ProductOfferShipmentTypeRepository extends AbstractRepository implements P
             ->endUse();
         }
 
+        if ($productOfferShipmentTypeConditionsTransfer->getProductConcreteSkus() !== []) {
+            $productOfferShipmentTypeQuery->useProductOfferQuery()
+                ->filterByConcreteSku_In($productOfferShipmentTypeConditionsTransfer->getProductConcreteSkus())
+            ->endUse();
+        }
+
         if ($productOfferShipmentTypeConditionsTransfer->getGroupByIdProductOffer()) {
             $productOfferShipmentTypeQuery
                 ->select([SpyProductOfferShipmentTypeTableMap::COL_FK_PRODUCT_OFFER, SpyProductOfferTableMap::COL_PRODUCT_OFFER_REFERENCE])
